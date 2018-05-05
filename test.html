@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a crap webpage</h1>
+
+    <div id="starwarspeeps"></div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Add Characters</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="POST" role="form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Role</label>
+                                <input type="text" class="form-control" id="role">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Age</label>
+                                <input type="text" class="form-control" id="age">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Force Points</label>
+                                <input type="text" class="form-control" id="force-points">
+                            </div>
+                        </form>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="fa fa-fire"></span> Add to the Force</button>
+                        </div>
+                        <div id="appendedCharacters">
+
+                        </div>         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function() {
+        $.get("localhost:3000/all")
+    })
+</script>
